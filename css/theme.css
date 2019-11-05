@@ -14649,3 +14649,13 @@ section {
 .vue-lists ul, .vue-lists ol {
     padding-left: 30px;
 }
+
+.required-field::after {
+    content: " * ";
+    color: red;
+}
+
+.expl::before {
+    content: " * ";
+    color: red;
+}
