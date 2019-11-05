@@ -10,12 +10,12 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Forms</title>
+    <title>Dashboard</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
     <!-- Bootstrap CSS-->
@@ -86,6 +86,11 @@
                             <a href="form.html">
                                 <i class="far fa-check-square"></i>Forms</a>
                         </li>
+                        <li>
+                            <a href="morador.html">
+                                <i class="far fa-check-square"></i>Cadastrar morador</a>
+                        </li>
+                        <li>
                         <li>
                             <a href="calendar.html">
                                 <i class="fas fa-calendar-alt"></i>Calendar</a>
@@ -164,7 +169,7 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li class="has-sub">
+                        <li class="active has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
@@ -190,9 +195,13 @@
                             <a href="table.html">
                                 <i class="fas fa-table"></i>Tables</a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="form.html">
                                 <i class="far fa-check-square"></i>Forms</a>
+                        </li>
+                        <li>
+                            <a href="morador.html">
+                                <i class="far fa-check-square"></i>Cadastrar morador</a>
                         </li>
                         <li>
                             <a href="calendar.html">
@@ -444,177 +453,198 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <strong>Cadastrar morador</strong>
-                                    </div>
-                                    <div class="card-body card-block">
-                                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="nome" class="form-control-label required-field">Nome</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="text" id="nome" name="nome" class="form-control">                                                
-                                                </div>
-                                            </div>
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="nascimento" class="form-control-label required-field">Data de nascimento</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="date" id="nascimento" name="nascimento" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="tempo-rua" class=" form-control-label required-field">Tempo de rua</label>
-                                                </div>
-                                                <div class="col-12 col-md-3">
-                                                    <input type="text" id="tempo-rua" name="tempo-rua" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="tempo-rua" class=" form-control-label required-field">Estado natal</label>
-                                                </div>
-                                                <div class="col-12 col-md-3">
-                                                    <input type="text" id="tempo-rua" name="tempo-rua" class="form-control">
-                                                </div>
-                                                <div class="col col-md-2">
-                                                    <label for="tempo-rua" class=" form-control-label required-field">Cidade natal</label>
-                                                </div>                                                
-                                                <div class="col-12 col-md-4">
-                                                    <input type="text" id="tempo-rua" name="tempo-rua" class="form-control">
-                                                </div>                                                
-                                            </div>                                            
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="select" class=" form-control-label required-field">Grau de instrução</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <select name="select" id="select" class="form-control">
-                                                        <option value="0">Selecione</option>
-                                                        <option value="1">Analfabeto(a)</option>
-                                                        <option value="2">Ensino fundamental incompleto</option>
-                                                        <option value="3">Ensino fundamental completo</option>
-                                                        <option value="4">Ensino médio incompleto</option>
-                                                        <option value="5">Ensino médio completo</option>
-                                                        <option value="6">Ensino superior completo</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label class=" form-control-label required-field">Possui alguma doença?</label>
-                                                </div>
-                                                <div class="col col-md-3">
-                                                    <div class="form-check-inline form-check">
-                                                        <label for="doenca-sim" class="form-check-label ">
-                                                            <input type="radio" id="doenca-sim" name="inline-radios" value="option1" class="form-check-input"> Sim
-                                                        </label>
-                                                        <div style="margin-left:1em"></div>                                                
-                                                        <label for="doenca-nao" class="form-check-label ">
-                                                            <input type="radio" id="doenca-nao" name="inline-radios" value="option2" class="form-check-input"> Não
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="col col-md-4">
-                                                    <label class=" form-control-label required-field">É ou já foi usuário de drogas?</label>
-                                                </div>
-                                                <div class="col col-md-2">
-                                                    <div class="form-check-inline form-check">
-                                                        <label for="drogas-sim" class="form-check-label ">
-                                                            <input type="radio" id="drogas-sim" name="inline-radios" value="option1" class="form-check-input"> Sim
-                                                        </label>
-                                                        <div style="margin-left:1em"></div>                                                
-                                                        <label for="drogas-nao" class="form-check-label ">
-                                                            <input type="radio" id="drogas-nao" name="inline-radios" value="option2" class="form-check-input"> Não
-                                                        </label>
-                                                    </div>
-                                                </div>                                                
-                                            </div>                                            
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="localizacao" class=" form-control-label">Localização frequente</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <textarea name="localizacao" id="localizacao" rows="4" placeholder="Descreva aqui os lugares mais frequentados pelo indivíduo" class="form-control"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="historico-ajuda" class=" form-control-label">Histórico de ajuda</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <textarea name="historico-ajuda" id="historico-ajuda" rows="4" placeholder="Caso este indivíduo já tenha recebido ajuda, descreva-a brevemente" class="form-control"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="row form-group">
-                                                <div class="col col-md-6">
-                                                    <div class="card">
-                                                        <div class="card-header">
-                                                            <strong>Contato 1</strong>   
-                                                        </div>
-                                                        <div class="card-body card-block">
-                                                            <form action="" method="post" class="form-horizontal">
-                                                                <div class="form-group">
-                                                                    <label for="nome-contato-1" class="pr-2 form-control-label">Nome</label>
-                                                                    <input type="text" id="nome-contato-1" required="" class="form-control">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="atribuicao-contato-1" class="px-2 form-control-label">Atribuição</label>
-                                                                    <input type="text" id="atribuicao-contato-1" placeholder="Ex: pai, irmão, tio, etc" required="" class="form-control">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="numero-contato-1" class="px-1  form-control-label">Número</label>
-                                                                    <input type="email" id="numero-contato-1" placeholder="(XX) XXXXX-XXXX" required="" class="form-control">
-                                                                </div>                                                        
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col col-md-6">
-                                                    <div class="card">
-                                                        <div class="card-header">
-                                                            <strong>Contato 2</strong>
-                                                        </div>
-                                                        <div class="card-body card-block">
-                                                            <form action="" method="post" class="form-horizontal">
-                                                                <div class="form-group">
-                                                                    <label for="nome-contato-2" class="pr-2 form-control-label">Nome</label>
-                                                                    <input type="text" id="nome-contato-2" required="" class="form-control">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="atribuicao-contato-2" class="px-2  form-control-label">Atribuição</label>
-                                                                    <input type="text" id="atribuicao-contato-2" placeholder="Ex: pai, irmão, tio, etc" required="" class="form-control">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="numero-contato-2" class="px-2  form-control-label">Número</label>
-                                                                    <input type="email" id="numero-contato-2" placeholder="(XX) XXXXX-XXXX" required="" class="form-control">
-                                                                </div>                                                        
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>                                                
-                                            </div>                                
-                                        </form>
-                                        <div class="expl">Obrigatório</div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary btn-sm">
-                                            <i class="fa fa-dot-circle-o"></i> Cadastrar
+                                <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
+                                    <div class="au-card-title" style="background-image:url('images/bg-title-02.jpg');">
+                                        <div class="bg-overlay bg-overlay--blue"></div>
+                                        <h3>
+                                            <i class="zmdi zmdi-comment-text"></i>Contatos</h3>
+                                        <button class="au-btn-plus">
+                                            <i class="zmdi zmdi-plus"></i>
                                         </button>
-                                        <button type="reset" class="btn btn-danger btn-sm">
-                                            <i class="fa fa-ban"></i> Limpar campos
-                                        </button>
+                                    </div>
+                                    <div class="au-inbox-wrap js-inbox-wrap">
+                                        <div class="au-message js-list-load">
+                                            <div class="au-message__noti">
+                                                <p>Você tem
+                                                    <span>2</span>
+
+                                                    novas mensagens
+                                                </p>
+                                            </div>
+                                            <div class="au-message-list">
+                                                <div class="au-message__item unread">
+                                                    <div class="au-message__item-inner">
+                                                        <div class="au-message__item-text">
+                                                            <div class="avatar-wrap">
+                                                                <div class="avatar">
+                                                                    <img src="images/icon/avatar-02.jpg" alt="John Smith">
+                                                                </div>
+                                                            </div>
+                                                            <div class="text">
+                                                                <h5 class="name">John Smith</h5>
+                                                                <p>Have sent a photo</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="au-message__item-time">
+                                                            <span>12 Min atrás</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="au-message__item unread">
+                                                    <div class="au-message__item-inner">
+                                                        <div class="au-message__item-text">
+                                                            <div class="avatar-wrap online">
+                                                                <div class="avatar">
+                                                                    <img src="images/icon/avatar-03.jpg" alt="Nicholas Martinez">
+                                                                </div>
+                                                            </div>
+                                                            <div class="text">
+                                                                <h5 class="name">Nicholas Martinez</h5>
+                                                                <p>You are now connected on message</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="au-message__item-time">
+                                                            <span>11:00 PM</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="au-message__item">
+                                                    <div class="au-message__item-inner">
+                                                        <div class="au-message__item-text">
+                                                            <div class="avatar-wrap online">
+                                                                <div class="avatar">
+                                                                    <img src="images/icon/avatar-04.jpg" alt="Michelle Sims">
+                                                                </div>
+                                                            </div>
+                                                            <div class="text">
+                                                                <h5 class="name">Michelle Sims</h5>
+                                                                <p>Lorem ipsum dolor sit amet</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="au-message__item-time">
+                                                            <span>Ontem</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="au-message__item">
+                                                    <div class="au-message__item-inner">
+                                                        <div class="au-message__item-text">
+                                                            <div class="avatar-wrap">
+                                                                <div class="avatar">
+                                                                    <img src="images/icon/avatar-05.jpg" alt="Michelle Sims">
+                                                                </div>
+                                                            </div>
+                                                            <div class="text">
+                                                                <h5 class="name">Michelle Sims</h5>
+                                                                <p>Purus feugiat finibus</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="au-message__item-time">
+                                                            <span>Domingo</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="au-message__item js-load-item">
+                                                    <div class="au-message__item-inner">
+                                                        <div class="au-message__item-text">
+                                                            <div class="avatar-wrap online">
+                                                                <div class="avatar">
+                                                                    <img src="images/icon/avatar-04.jpg" alt="Michelle Sims">
+                                                                </div>
+                                                            </div>
+                                                            <div class="text">
+                                                                <h5 class="name">Michelle Sims</h5>
+                                                                <p>Lorem ipsum dolor sit amet</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="au-message__item-time">
+                                                            <span>Yesterday</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="au-message__item js-load-item">
+                                                    <div class="au-message__item-inner">
+                                                        <div class="au-message__item-text">
+                                                            <div class="avatar-wrap">
+                                                                <div class="avatar">
+                                                                    <img src="images/icon/avatar-05.jpg" alt="Michelle Sims">
+                                                                </div>
+                                                            </div>
+                                                            <div class="text">
+                                                                <h5 class="name">Michelle Sims</h5>
+                                                                <p>Purus feugiat finibus</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="au-message__item-time">
+                                                            <span>Sunday</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="au-message__footer">
+                                                <button class="au-btn au-btn-load js-load-btn">carregar mais</button>
+                                            </div>
+                                        </div>
+                                        <div class="au-chat">
+                                            <div class="au-chat__title">
+                                                <div class="au-chat-info">
+                                                    <div class="avatar-wrap online">
+                                                        <div class="avatar avatar--small">
+                                                            <img src="images/icon/avatar-02.jpg" alt="John Smith">
+                                                        </div>
+                                                    </div>
+                                                    <span class="nick">
+                                                        <a href="#">John Smith</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="au-chat__content">
+                                                <div class="recei-mess-wrap">
+                                                    <span class="mess-time">12 Min ago</span>
+                                                    <div class="recei-mess__inner">
+                                                        <div class="avatar avatar--tiny">
+                                                            <img src="images/icon/avatar-02.jpg" alt="John Smith">
+                                                        </div>
+                                                        <div class="recei-mess-list">
+                                                            <div class="recei-mess">Lorem ipsum dolor sit amet, consectetur adipiscing elit non iaculis</div>
+                                                            <div class="recei-mess">Donec tempor, sapien ac viverra</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="send-mess-wrap">
+                                                    <span class="mess-time">30 Sec ago</span>
+                                                    <div class="send-mess__inner">
+                                                        <div class="send-mess-list">
+                                                            <div class="send-mess">Lorem ipsum dolor sit amet, consectetur adipiscing elit non iaculis</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="au-chat-textfield">
+                                                <form class="au-form-icon">
+                                                    <input class="au-input au-input--full au-input--h65" type="text" placeholder="Type a message">
+                                                    <button class="au-input-icon">
+                                                        <i class="zmdi zmdi-camera"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>                            
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- END MAIN CONTENT-->
+            <!-- END PAGE CONTAINER-->
         </div>
 
     </div>
