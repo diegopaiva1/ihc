@@ -29,6 +29,9 @@
     <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <!-- full calendar requires moment along jquery which is included above -->
+    <script src="vendor/fullcalendar-3.10.0/lib/moment.min.js"></script>
+    <script src="vendor/fullcalendar-3.10.0/fullcalendar.js"></script>
 
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
@@ -91,9 +94,13 @@
                                 <i class="far fa-check-square"></i>Cadastrar morador</a>
                         </li>
                         <li>
+                            <a href="evento.html">
+                                <i class="far fa-check-square"></i>Eventos</a>
+                        </li>
+                        <li>
                             <a href="chat.html">
                                 <i class="far fa-check-square"></i>Contatos</a>
-                        </li>                        
+                        </li>
                         <li>
                         <li>
                             <a href="calendar.html">
@@ -208,9 +215,13 @@
                                 <i class="far fa-check-square"></i>Cadastrar morador</a>
                         </li>
                         <li>
+                            <a href="evento.html">
+                                <i class="far fa-calendar"></i>Eventos</a>
+                        </li>
+                        <li>
                             <a href="chat.html">
                                 <i class="far fa-check-square"></i>Contatos</a>
-                        </li>                        
+                        </li>
                         <li>
                             <a href="calendar.html">
                                 <i class="fas fa-calendar-alt"></i>Calendar</a>
@@ -287,7 +298,8 @@
                     <div class="container-fluid">
                         <div class="header-wrap">
                             <form class="form-header" action="" method="POST">
-                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
+                                <input class="au-input au-input--xl" type="text" name="search"
+                                    placeholder="Search for datas &amp; reports..." />
                                 <button class="au-btn--submit" type="submit">
                                     <i class="zmdi zmdi-search"></i>
                                 </button>
@@ -467,34 +479,37 @@
                                             <img class="card-img-top" src="images/bg-title-01.jpg" alt="Card image cap">
                                             <div class="card-body">
                                                 <h4 class="card-title mb-3">Card Image Title</h4>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                                <p class="card-text">Some quick example text to build on the card title
+                                                    and make up the bulk of the card's
                                                     content.
                                                 </p>
                                             </div>
-                                        </div>                                                                                
+                                        </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="card">
                                             <img class="card-img-top" src="images/bg-title-01.jpg" alt="Card image cap">
                                             <div class="card-body">
                                                 <h4 class="card-title mb-3">Card Image Title</h4>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                                <p class="card-text">Some quick example text to build on the card title
+                                                    and make up the bulk of the card's
                                                     content.
                                                 </p>
                                             </div>
-                                        </div>                                                                                
+                                        </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="card">
                                             <img class="card-img-top" src="images/bg-title-01.jpg" alt="Card image cap">
                                             <div class="card-body">
                                                 <h4 class="card-title mb-3">Card Image Title</h4>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                                <p class="card-text">Some quick example text to build on the card title
+                                                    and make up the bulk of the card's
                                                     content.
                                                 </p>
                                             </div>
-                                        </div>                                                                                
-                                    </div>                                    
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-4">
@@ -522,7 +537,8 @@
                                                         <div class="au-message__item-text">
                                                             <div class="avatar-wrap">
                                                                 <div class="avatar">
-                                                                    <img src="images/icon/avatar-02.jpg" alt="John Smith">
+                                                                    <img src="images/icon/avatar-02.jpg"
+                                                                        alt="John Smith">
                                                                 </div>
                                                             </div>
                                                             <div class="text">
@@ -540,7 +556,8 @@
                                                         <div class="au-message__item-text">
                                                             <div class="avatar-wrap online">
                                                                 <div class="avatar">
-                                                                    <img src="images/icon/avatar-03.jpg" alt="Nicholas Martinez">
+                                                                    <img src="images/icon/avatar-03.jpg"
+                                                                        alt="Nicholas Martinez">
                                                                 </div>
                                                             </div>
                                                             <div class="text">
@@ -558,7 +575,8 @@
                                                         <div class="au-message__item-text">
                                                             <div class="avatar-wrap online">
                                                                 <div class="avatar">
-                                                                    <img src="images/icon/avatar-04.jpg" alt="Michelle Sims">
+                                                                    <img src="images/icon/avatar-04.jpg"
+                                                                        alt="Michelle Sims">
                                                                 </div>
                                                             </div>
                                                             <div class="text">
@@ -576,7 +594,8 @@
                                                         <div class="au-message__item-text">
                                                             <div class="avatar-wrap">
                                                                 <div class="avatar">
-                                                                    <img src="images/icon/avatar-05.jpg" alt="Michelle Sims">
+                                                                    <img src="images/icon/avatar-05.jpg"
+                                                                        alt="Michelle Sims">
                                                                 </div>
                                                             </div>
                                                             <div class="text">
@@ -594,7 +613,8 @@
                                                         <div class="au-message__item-text">
                                                             <div class="avatar-wrap online">
                                                                 <div class="avatar">
-                                                                    <img src="images/icon/avatar-04.jpg" alt="Michelle Sims">
+                                                                    <img src="images/icon/avatar-04.jpg"
+                                                                        alt="Michelle Sims">
                                                                 </div>
                                                             </div>
                                                             <div class="text">
@@ -612,7 +632,8 @@
                                                         <div class="au-message__item-text">
                                                             <div class="avatar-wrap">
                                                                 <div class="avatar">
-                                                                    <img src="images/icon/avatar-05.jpg" alt="Michelle Sims">
+                                                                    <img src="images/icon/avatar-05.jpg"
+                                                                        alt="Michelle Sims">
                                                                 </div>
                                                             </div>
                                                             <div class="text">
@@ -651,8 +672,10 @@
                                                             <img src="images/icon/avatar-02.jpg" alt="John Smith">
                                                         </div>
                                                         <div class="recei-mess-list">
-                                                            <div class="recei-mess">Lorem ipsum dolor sit amet, consectetur adipiscing elit non iaculis</div>
-                                                            <div class="recei-mess">Donec tempor, sapien ac viverra</div>
+                                                            <div class="recei-mess">Lorem ipsum dolor sit amet,
+                                                                consectetur adipiscing elit non iaculis</div>
+                                                            <div class="recei-mess">Donec tempor, sapien ac viverra
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -660,14 +683,16 @@
                                                     <span class="mess-time">30 Sec ago</span>
                                                     <div class="send-mess__inner">
                                                         <div class="send-mess-list">
-                                                            <div class="send-mess">Lorem ipsum dolor sit amet, consectetur adipiscing elit non iaculis</div>
+                                                            <div class="send-mess">Lorem ipsum dolor sit amet,
+                                                                consectetur adipiscing elit non iaculis</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="au-chat-textfield">
                                                 <form class="au-form-icon">
-                                                    <input class="au-input au-input--full au-input--h65" type="text" placeholder="Type a message">
+                                                    <input class="au-input au-input--full au-input--h65" type="text"
+                                                        placeholder="Type a message">
                                                     <button class="au-input-icon">
                                                         <i class="zmdi zmdi-camera"></i>
                                                     </button>
@@ -676,7 +701,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>                                                        
+                            </div>
                         </div>
                     </div>
                 </div>
