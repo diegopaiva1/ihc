@@ -21,6 +21,8 @@
     <!-- Bootstrap CSS-->
     <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
 
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
     <!-- Vendor CSS-->
     <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
     <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
@@ -463,6 +465,22 @@
                             <div class="col-lg-8">
                                 <div class="row">
                                     <div class="col-md-12">
+                                        <div class="card border border-secondary">
+                                            <div class="card-header">
+                                                <strong class="card-title">Nova publicação</strong>
+                                            </div>
+                                            <div class="card-body" id="editor">
+                                                Insira aqui o texto de sua publicação!
+                                            </div>                                           
+                                            <div class="card-footer">
+                                                <button type="button" class="btn btn-primary btn-sm">
+                                                    <i class="fa fa-pencil-square"></i>&nbsp; Publicar</button>
+                                                <button style="margin-left: 1em;" type="button" class="btn btn-danger btn-sm">
+                                                        <i class="fa fa-ban"></i>&nbsp;Descartar</button>                                                        
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                    <div class="col-md-12">
                                         <div class="card">
                                             <img class="card-img-top" src="images/bg-title-01.jpg" alt="Card image cap">
                                             <div class="card-body">
@@ -715,6 +733,33 @@
     <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
     <script src="vendor/chartjs/Chart.bundle.min.js"></script>
     <script src="vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Include the Quill library -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+    <!-- Initialize Quill editor -->
+    <script>
+    var toolbarOptions = [
+        [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+        [{ 'font': [] }],
+
+        ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+        
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+    
+        [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+        [{ 'align': [] }],
+
+        ['image', 'video']                                         // remove formatting button
+    ];
+
+    var quill = new Quill('#editor', {
+        theme: 'snow',
+        modules: {
+            toolbar: toolbarOptions
+        }
+    });
     </script>
 
     <!-- Main JS-->
